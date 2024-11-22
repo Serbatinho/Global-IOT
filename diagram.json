@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "author": "Lucas Serbato de barros",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": -129.56, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 6, "left": -101.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -72.85,
+      "left": 67.2,
+      "attrs": { "value": "0" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -92.05,
+      "left": -336,
+      "attrs": { "value": "0" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -164.5, "left": 124.6, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -183.7, "left": -259.4, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -220.5, "left": -24.6, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht2", "top": -220.5, "left": -111, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led1:A", "esp:25", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "green", [ "v0" ] ],
+    [ "r1:1", "esp:34", "yellow", [ "v0" ] ],
+    [ "r1:2", "pot1:wiper", "yellow", [ "v0" ] ],
+    [ "pot1:VCC", "esp:3V3", "red", [ "v67.2", "h-279.2", "v19.2" ] ],
+    [ "pot1:GND", "esp:GND.2", "black", [ "v86.4", "h-182.4" ] ],
+    [ "r2:1", "esp:35", "blue", [ "v0" ] ],
+    [ "r2:2", "pot2:wiper", "blue", [ "v0" ] ],
+    [ "pot2:VCC", "esp:3V3", "red", [ "v86.4", "h66.4", "v19.2" ] ],
+    [ "pot2:GND", "esp:GND.2", "black", [ "v124.8", "h201.6" ] ],
+    [ "pot1:SIG", "r1:2", "green", [ "v0" ] ],
+    [ "pot2:SIG", "r2:2", "green", [ "v0" ] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v28.8", "h-67.35" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:26", "green", [ "v0" ] ],
+    [ "dht2:GND", "esp:GND.2", "black", [ "h38.4", "v96" ] ],
+    [ "esp:27", "dht2:SDA", "green", [ "h0" ] ],
+    [ "dht2:VCC", "esp:3V3", "red", [ "h-28.8", "v96" ] ]
+  ],
+  "dependencies": {}
+}
