@@ -10,9 +10,10 @@ Este projeto tem como objetivo monitorar e exibir dados de sensores conectados a
 - **Lucas Serbato de Barros** - RM 551821  
 - **Phablo Isaias Santos** - RM 550687  
 
-## Link para a Dashboard
+## Link para a Dashboard e projeto 
 Acesse os dados do projeto na dashboard pública:  
 [Dashboard Pública no Thinger.io](https://console.thinger.io/dashboards/Dispositivo1?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfRGlzcG9zaXRpdm8xIiwic3ZyIjoidXMtZWFzdC5hd3MudGhpbmdlci5pbyIsInVzciI6InNlcmJhdG8ifQ.tiw8-6c05XTsL8r6S_v1ruGC4H2W6bUfaaM7FffeCzc)
+[Projeto no Wokwi](https://wokwi.com/projects/415028598213747713)
 
 ## Dependências Utilizadas
 As seguintes bibliotecas e ferramentas são necessárias para o funcionamento do projeto:
